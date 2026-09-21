@@ -73,6 +73,12 @@ public class Main {
         System.out.println("Le min est : " + min);
         int index=index(new char[]{'a', 'b', 'c', 'd','c'}, 'c');
         System.out.println("L'index est : " + index);
+        int entete=entete(new int[]{1, 2, 3,10, 5});
+        System.out.println("L'entete est : " + entete);
+        int sequence=sequencePos(new int[]{1, -2, 3,-10, 5, -1, 2, 3});
+        System.out.println("La sequence est : " + sequence);
+        int produit=produit(new int[][]{{1, 2}, {3, 4}});
+        System.out.println("Le produit est : " + produit);
         /** int[] tab = tableau(10);
         System.out.println("Le tableau est :");
         for (int i = 0; i < tab.length; i++) {
@@ -135,8 +141,50 @@ public class Main {
         }
         return index;
     }
+    // 11
+    public static int entete(int[] tab){
+        int entete=0;
+        for (int i=0;i<tab.length;i++){
+            if (tab[i]>0){
+                entete++;
+        }else{
+            break;
+        }
+        }
+        return entete;
         
     }
-        
+    //12
+    public static int sequencePos(int[] tab){
+        int count=0;
+        int max=0;
+        for (int i=0;i<tab.length;i++){
+            if (tab[i]>0){
+                count++;
+            }else{
+                if (count>max){
+                    max=count;
+                }
+                count=0;
+               
+            }
+        }
+        if (count>max){
+            max=count;
+        }
+        return max;
+    }
+    // 13
+    public static int produit(int [][] tab){
+        int result=1;
+        for (int i=0;i<tab.length;i++){
+            for (int j=0;j<tab[i].length;j++){
+                result=result*tab[i][j];
+            }
+        }
+        return result;
+    }
+
+}        
     
 
