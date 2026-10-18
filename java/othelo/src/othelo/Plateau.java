@@ -1,3 +1,4 @@
+package othelo;
 public class Plateau{
     // le constructeur
     public Plateau(int longueur, int largeur){

@@ -1,3 +1,4 @@
+package othelo;
 public enum Direction {
     N(-1, 0),
     NE(-1, 1),

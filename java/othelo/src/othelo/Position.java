@@ -1,3 +1,4 @@
+package othelo;
 public class Position {
     // Le constructeur
     public Position(int ligne, int colonne){
