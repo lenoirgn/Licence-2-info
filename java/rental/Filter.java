@@ -1,6 +1,5 @@
-
-import rental.Vehicle;
+package rental;
 
 public interface Filter{
-    public List<Vehicle> public filterByArg(Sting arg);
+    public boolean  filterBy(Vehicle veh);
 }
